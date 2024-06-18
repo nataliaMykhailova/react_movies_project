@@ -1,18 +1,14 @@
-const baseUrl = 'https://api.themoviedb.org/3';
-const genres = '/genre/movie/list';
-const search = (query: string): string => `/search/keyword?query=${query}`;
-const trailer =(movieId:number): string => `/movie/${movieId}/videos`;
-const similar = (movieId:number): string => `/movie/${movieId}/similar`;
-const details = (movieId:number):string => `/movie/${movieId}`;
-
+const baseURL = 'https://api.themoviedb.org/3';
 const urls = {
-    genres,
-    search,
-    trailer,
-    similar,
-    details,
+    poster: 'https://image.tmdb.org/t/p/w500',
+    video: 'https://www.youtube.com/embed/',
+    genres: '/genre/movie/list',
+    search: (query: string): string => `/search/keyword?query=${query}`,
+    trailer:(movieId:number): string => `/movie/${movieId}/videos`,
+    similar: (movieId:number): string => `/movie/${movieId}/similar`,
+    details: (movieId:number):string => `/movie/${movieId}`,
     lists:{
-        full: (page: number):string =>`/discover/movie?page=${page}`,
+        full:`/discover/movie`,
         now_playing: '/movie/now_playing',
         popular: '/movie/popular',
         top_rated: '/movie/top_rated',
@@ -23,7 +19,7 @@ const urls = {
 
 
 export {
-    baseUrl,
+    baseURL,
     urls
 
 }
