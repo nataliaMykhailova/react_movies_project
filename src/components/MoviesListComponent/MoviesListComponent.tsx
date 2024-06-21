@@ -1,10 +1,17 @@
-import React from 'react';
-
-const MoviesListComponent = () => {
+import React, {FC} from 'react';
+import {IMovieModel} from "../../models/IMovieModel";
+import MoviesListCardComponent from "../MovieListCardContainer/MoviesListCardComponent/MoviesListCardComponent";
+import css from './MovieListComponent.module.css'
+interface IProps{
+    movies: IMovieModel[]
+}
+const MoviesListComponent:FC<IProps> = ({movies}) => {
     return (
-        <div>
-            
-            </div>
+        <div className={css.movieList}>
+            {
+                movies && movies.map(movie => <MoviesListCardComponent key={movie.id} movie={movie}/>)
+            }
+        </div>
     );
 };
 

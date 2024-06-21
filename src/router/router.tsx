@@ -11,11 +11,13 @@ const  routes:RouteObject[] = [
     children: [
         {index: true, element: <HomePage/>},
         {path:'/allMovies', element: <MovieListPage/>},
+        {path:'/movies/genre/:genreId', element: <MovieListPage/>},
         {path:'/movie/:movieId/similar', element: <MovieListPage/>},
-        {path:'/movie/now_playing', element: <MovieListPage/>},
-        {path:'/movie/top_rated', element: <MovieListPage/>},
-        {path:'/movie/upcoming', element: <MovieListPage/>},
-        {path:'/genre/movie/list', element: <MovieListPage/>},
+        {path:'/movies/now_playing', element: <MovieListPage/>},
+        {path:'/movies/top_rated', element: <MovieListPage/>},
+        {path:'/movies/upcoming', element: <MovieListPage/>},
+        {path:'/movies/popular', element: <MovieListPage/>},
+        {path:'/search/keyword/:query', element: <MovieListPage/>},
         {path:'/movie/:movieId', element: <MovieDetailsPage/>}
 
     ]},

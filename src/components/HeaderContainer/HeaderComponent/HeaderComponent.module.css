@@ -1,0 +1,19 @@
+.header {
+    background-color: white;
+    height: 100px;
+    border-top-right-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+
+.header a:hover {
+    font-size: 20px;
+    color: cornflowerblue;
+}

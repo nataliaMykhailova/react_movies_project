@@ -1,0 +1,14 @@
+.category{
+    width: 99%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5vw;
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    border-top: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}

@@ -6,11 +6,6 @@ import {IVideoResponseModel} from "../models/IVideoModels/IVideoResponseModel";
 
 
 const movieService = {
-    fullList: async (page:number):Promise<IListResponseModel<IMovieModel>> => {
-        const response =
-            await apiService.get(urls.lists.full, {params:{page:page}});
-        return response.data;
-    },
     getOne: async (movieId:number):Promise<IMovieModel> =>{
         const response = await apiService.get(urls.details(movieId));
         return response.data

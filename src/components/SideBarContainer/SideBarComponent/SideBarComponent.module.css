@@ -1,0 +1,26 @@
+.sideBar{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    backdrop-filter: blur(50px);
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.sideBar hr{
+    width: 200px;
+}
+.sideBar a{
+    color: silver;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.sideBar a:hover {
+    color: lightblue;
+    font-size: 28px;
+    border: 1px solid lightblue;
+}

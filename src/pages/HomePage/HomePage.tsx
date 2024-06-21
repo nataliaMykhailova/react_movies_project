@@ -1,12 +1,10 @@
 import React from 'react';
-import HomePageComponent from "../../components/HomePageComponent/HomePageComponent";
-import PaginationComponent from "../../components/PaginationComponent/PaginationComponent";
+import HomePageComponent from "../../components/HomePageContainer/HomePageComponent/HomePageComponent";
 
 const HomePage = () => {
     return (
         <div>
             <HomePageComponent/>
-            <PaginationComponent/>
         </div>
     );
 };
