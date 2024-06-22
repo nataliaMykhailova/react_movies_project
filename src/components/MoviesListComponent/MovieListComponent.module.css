@@ -1,6 +1,6 @@
 .movieList{
     width: 99.5%;
-    height: 300vh;
+    height: 280vh;
     display: flex;
     flex-wrap: wrap;
     gap: 0.5vw;

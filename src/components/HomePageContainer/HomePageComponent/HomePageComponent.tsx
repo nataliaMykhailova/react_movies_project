@@ -1,9 +1,10 @@
 import React, {useEffect} from 'react';
-import MovieCategoryComponent from "../MovieCategoryComponent/MovieCategoryComponent";
-import css from './HomePageComponent.module.css'
 import {NavLink} from "react-router-dom";
+
+import MovieCategoryComponent from "../MovieCategoryComponent/MovieCategoryComponent";
 import {useAppDispatch, useAppSelector} from "../../../hooks/reduxHooks";
 import {movieListsActions} from "../../../redux/slices/MovieListsSlice";
+import css from './HomePageComponent.module.css'
 
 const HomePageComponent = () => {
     const dispatch = useAppDispatch();
@@ -14,8 +15,9 @@ const HomePageComponent = () => {
         dispatch(movieListsActions.loadUpcomingList(1));
     }, [dispatch]);
 
-    const { nowPlayingList, popularList, topRatedList, upcomingList } = useAppSelector(state => state.movieListSlice);
-    console.log(nowPlayingList);
+    const { nowPlayingList, popularList, topRatedList, upcomingList } =
+        useAppSelector(state => state.movieListSlice);
+
 
     return (
         <div className={css.homePage}>

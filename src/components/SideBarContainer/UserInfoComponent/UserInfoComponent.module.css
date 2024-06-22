@@ -1,11 +1,11 @@
 .user{
     display: flex;
     flex-direction: column;
-    color: silver;
+    color: slategrey;
+    padding: 5px 20px;
+    border-top: 3px double slategrey;
+    border-bottom: 3px double slategrey;
 }
 .user h4{
     margin: 0;
-}
-.user hr{
-    width: 200px;
 }

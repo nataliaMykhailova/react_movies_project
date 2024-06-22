@@ -1,7 +1,8 @@
+import {IGenreModel} from "../IGenreModels/IGenreModel";
 export interface IMovieModel {
     adult: boolean,
     backdrop_path: string,
-    genres: number[],
+    genres: IGenreModel[],
     id: number,
     original_language: string,
     original_title: string,
@@ -14,8 +15,6 @@ export interface IMovieModel {
     vote_average: number,
     vote_count: number
 }
-
-
 
 
 

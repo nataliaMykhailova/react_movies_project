@@ -1,8 +1,8 @@
-import {IGenreResponseModel} from "../models/IGenreResponseModel";
+import {IGenreResponseModel} from "../models/IGenreModels/IGenreResponseModel";
 import {apiService} from "./apiService";
 import {urls} from "../constants/urls";
-import {IListResponseModel} from "../models/IListResponseModel";
-import {IMovieModel} from "../models/IMovieModel";
+import {IListResponseModel} from "../models/IMovieModels/IListResponseModel";
+import {IMovieModel} from "../models/IMovieModels/IMovieModel";
 
 const genreService= {
     getAll: async ():Promise<IGenreResponseModel> =>{

@@ -1,4 +1,5 @@
-import {createBrowserRouter, Navigate, RouteObject} from "react-router-dom";
+import {createBrowserRouter, RouteObject} from "react-router-dom";
+
 import MainLayout from "../layouts/MainLayout/MainLayout";
 import ErrorLayout from "../layouts/ErrorLayout/ErrorLayout";
 import HomePage from "../pages/HomePage/HomePage";
@@ -17,7 +18,7 @@ const  routes:RouteObject[] = [
         {path:'/movies/top_rated', element: <MovieListPage/>},
         {path:'/movies/upcoming', element: <MovieListPage/>},
         {path:'/movies/popular', element: <MovieListPage/>},
-        {path:'/search/keyword/:query', element: <MovieListPage/>},
+        {path:'/search/movie/:query', element: <MovieListPage/>},
         {path:'/movie/:movieId', element: <MovieDetailsPage/>}
 
     ]},

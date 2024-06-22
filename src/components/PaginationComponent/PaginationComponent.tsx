@@ -1,7 +1,8 @@
 import React from 'react';
 import {Pagination, Typography} from "@mui/material";
-import css from './PaginationComponent.module.css'
+
 import {ChangeQueryType} from "../../types/changeEvent";
+import css from './PaginationComponent.module.css'
 
 interface PaginationProps {
     count: number;

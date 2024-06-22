@@ -1,15 +1,17 @@
-import {IGenreModel} from "../../models/IGenreModel";
-import {IMovieModel} from "../../models/IMovieModel";
 import {createAsyncThunk, createSlice, isFulfilled, isPending, isRejected} from "@reduxjs/toolkit";
-import {genreService} from "../../services/genreService";
 import {AxiosError} from "axios";
-import {IListResponseModel} from "../../models/IListResponseModel";
+
+import {IGenreModel} from "../../models/IGenreModels/IGenreModel";
+import {IMovieModel} from "../../models/IMovieModels/IMovieModel";
+import {genreService} from "../../services/genreService";
+import {IListResponseModel} from "../../models/IMovieModels/IListResponseModel";
 
 type GenresSliceType = {
     genres: IGenreModel [],
     error: string | null,
     genreMoviesList: IListResponseModel<IMovieModel> | null
 }
+
 const genreInitialState:GenresSliceType ={
     genres: [],
     error: null,

@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
-import {IMovieModel} from "../../models/IMovieModel";
+
+import {IMovieModel} from "../../models/IMovieModels/IMovieModel";
 import MoviesListCardComponent from "../MovieListCardContainer/MoviesListCardComponent/MoviesListCardComponent";
 import css from './MovieListComponent.module.css'
 interface IProps{

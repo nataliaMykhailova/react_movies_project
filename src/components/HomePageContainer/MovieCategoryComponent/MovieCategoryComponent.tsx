@@ -1,11 +1,10 @@
-import React, {FC, useEffect} from 'react';
-import {useAppDispatch, useAppSelector} from "../../../hooks/reduxHooks";
-import {movieActions} from "../../../redux/slices/MoviesSlice";
+import React, {FC} from 'react';
+
 import {getRandomMovies} from "../../../helpers/randomMovie";
-import css from './MovieCategoryComponent.module.css'
 import MoviesListCardComponent from "../../MovieListCardContainer/MoviesListCardComponent/MoviesListCardComponent";
-import {movieListsActions} from "../../../redux/slices/MovieListsSlice";
-import {IMovieModel} from "../../../models/IMovieModel";
+import {IMovieModel} from "../../../models/IMovieModels/IMovieModel";
+import css from './MovieCategoryComponent.module.css'
+
 interface IProps{
     movies:IMovieModel[]
 }

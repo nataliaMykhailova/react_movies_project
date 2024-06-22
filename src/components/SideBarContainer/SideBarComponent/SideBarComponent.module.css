@@ -7,20 +7,24 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    border-left: 1px solid slategrey;
+    border-top: 1px solid silver;
+
 }
 .sideBar hr{
-    width: 200px;
+    width: 13vw;
 }
 .sideBar a{
-    color: silver;
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     text-decoration: none;
     font-size: 25px;
+    color: cornflowerblue;
+    font-weight: bold;
 }
 
 .sideBar a:hover {
-    color: lightblue;
+    color: slategray;
     font-size: 28px;
-    border: 1px solid lightblue;
+    border: 1px solid slategray;
 }

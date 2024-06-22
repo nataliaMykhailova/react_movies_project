@@ -1,8 +1,9 @@
-import {IListResponseModel} from "../../models/IListResponseModel";
-import {IMovieModel} from "../../models/IMovieModel";
-import {createAsyncThunk, createSlice, isFulfilled, isPending, isRejected} from "@reduxjs/toolkit";
-import {movieService} from "../../services/movieService";
+import {createAsyncThunk, createSlice, isFulfilled, isPending, isRejected, PayloadAction} from "@reduxjs/toolkit";
 import {AxiosError} from "axios";
+
+import {IListResponseModel} from "../../models/IMovieModels/IListResponseModel";
+import {IMovieModel} from "../../models/IMovieModels/IMovieModel";
+import {movieService} from "../../services/movieService";
 import {urls} from "../../constants/urls";
 
 type MovieListsSliceType = {
@@ -13,6 +14,7 @@ type MovieListsSliceType = {
     popularList: IListResponseModel<IMovieModel> | null;
     topRatedList: IListResponseModel<IMovieModel> | null;
     upcomingList: IListResponseModel<IMovieModel> | null;
+    page:number;
     error: string | null;
 
 
@@ -25,6 +27,7 @@ const movieListInitialState: MovieListsSliceType = {
     popularList: null,
     topRatedList: null,
     upcomingList: null,
+    page:1,
     error: null
 }
 const loadSearchList = createAsyncThunk<IListResponseModel<IMovieModel>, { page: number, query: string }>(
@@ -32,7 +35,7 @@ const loadSearchList = createAsyncThunk<IListResponseModel<IMovieModel>, { page:
     async ({page, query}, thunkAPI) => {
         try {
             const response = await movieService.search(page, query);
-            return thunkAPI.fulfillWithValue(response)
+            return thunkAPI.fulfillWithValue(response);
         } catch (e) {
             const error = e as AxiosError;
             return thunkAPI.rejectWithValue(error.response?.data);
@@ -117,7 +120,11 @@ const loadUpcomingList = createAsyncThunk<IListResponseModel<IMovieModel>, numbe
 export const movieListsSlice = createSlice({
     name: 'movieListsSlice',
     initialState: movieListInitialState,
-    reducers: {},
+    reducers: {
+        setPage: (state, action: PayloadAction<number>) => {
+            state.page = action.payload;
+        }
+    },
     extraReducers: builder => builder
         .addCase(loadFullList.fulfilled, (state, action)=>{
             state.fullList =action.payload

@@ -3,7 +3,7 @@ const urls = {
     poster: 'https://image.tmdb.org/t/p/w500',
     video: 'https://www.youtube.com/embed/',
     genres: '/genre/movie/list',
-    search: (query: string): string => `/search/keyword?query=${query}`,
+    search: (query: string): string => `/search/movie?query=${query}`,
     trailer:(movieId:number): string => `/movie/${movieId}/videos`,
     similar: (movieId:number): string => `/movie/${movieId}/similar`,
     details: (movieId:number):string => `/movie/${movieId}`,

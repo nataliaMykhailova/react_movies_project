@@ -1,0 +1,17 @@
+.theme{
+    width: 90%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Orbitron", sans-serif;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+.theme h2{
+    margin: 0;
+}
+.theme h3{
+    margin: 0;
+}

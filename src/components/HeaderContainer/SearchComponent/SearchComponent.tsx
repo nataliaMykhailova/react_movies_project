@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+
 import css from './SearchComponent.module.css'
 
 type SearchFormInputs = {
@@ -12,19 +13,14 @@ const SearchComponent = () => {
     const navigate = useNavigate();
 
     const submitSearch: SubmitHandler<SearchFormInputs> = (data) => {
-        navigate(`/search/keyword/${encodeURIComponent(data.search.trim())}`);
-        console.log(data.search.trim());
+        navigate(`/search/movie/${encodeURIComponent(data.search.trim())}`);
         reset();
     };
 
     return (
         <div className={css.search}>
             <form onSubmit={handleSubmit(submitSearch)}>
-                <input
-                    type="text"
-                    placeholder="Search your interesting..."
-                    {...register('search', { required: true })}
-                />
+                <input type="text" placeholder="Search your interesting..." {...register('search', { required: true })}/>
                 <button type="submit">Search</button>
             </form>
         </div>

@@ -1,19 +1,20 @@
 import React, {useEffect, useState} from 'react';
+import {useNavigate} from "react-router-dom";
+import {FormControl, InputLabel, MenuItem, Select, SelectChangeEvent} from "@mui/material";
+
 import {useAppDispatch, useAppSelector} from "../../../hooks/reduxHooks";
 import {genreActions} from "../../../redux/slices/GenresSlice";
-import {FormControl, InputLabel, MenuItem, Select, SelectChangeEvent} from "@mui/material";
-import {useNavigate} from "react-router-dom";
 
 const GenreSelectorComponent = () => {
     const dispatch = useAppDispatch();
+
     useEffect(() => {
         dispatch(genreActions.loadGenresList(null));
     }, [dispatch]);
 
     const {genres} = useAppSelector(state => state.genresSlice);
 
-    const [idOfSelectedGenre, setIdOfSelectedGenre] =
-        useState<string | null>(null);
+    const [idOfSelectedGenre, setIdOfSelectedGenre] = useState<string | null>(null);
     const navigate = useNavigate();
 
     const handleChange = (e: SelectChangeEvent) => {
@@ -31,8 +32,7 @@ const GenreSelectorComponent = () => {
                     id="demo-simple-select-standard"
                     value={idOfSelectedGenre ?? ''}
                     onChange={handleChange}
-                    label="All Genres"
-                >
+                    label="All Genres">
                     {
                         genres.map(genre =>
                             <MenuItem key={genre.id} value={genre.id}>{genre.name}</MenuItem>)

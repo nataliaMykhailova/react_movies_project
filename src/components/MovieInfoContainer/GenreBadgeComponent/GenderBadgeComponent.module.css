@@ -1,0 +1,9 @@
+.badgeContainer {
+    display: flex;
+    gap: 50px;
+}
+
+.badge {
+    padding: 5px;
+    margin: 5px;
+}

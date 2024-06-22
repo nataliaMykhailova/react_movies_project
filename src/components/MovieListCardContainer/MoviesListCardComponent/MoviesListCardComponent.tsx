@@ -1,14 +1,14 @@
 import React, {FC} from 'react';
-import {IMovieModel} from "../../../models/IMovieModel";
-import css from './MovieListCardComponent.module.css'
 import {NavLink} from "react-router-dom";
+
+import {IMovieModel} from "../../../models/IMovieModels/IMovieModel";
 import PosterPreviewComponent from "../PosterPreviewComponent/PosterPreviewComponent";
 import StarsRatingComponent from "../StarsRatingComponent/StarsRatingComponent";
+import css from './MovieListCardComponent.module.css'
 interface IProps {
     movie: IMovieModel
 }
 const MoviesListCardComponent:FC<IProps> = ({movie}) => {
-    console.log(movie);
     return (
         <NavLink to={`/movie/${movie.id}`} className={css.card}>
             <div className={css.poster}><PosterPreviewComponent path = {movie.poster_path}/></div>

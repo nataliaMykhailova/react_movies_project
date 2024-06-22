@@ -1,7 +1,8 @@
 import {createAsyncThunk, createSlice, isFulfilled, isPending, isRejected} from "@reduxjs/toolkit";
-import {IMovieModel} from "../../models/IMovieModel";
-import {movieService} from "../../services/movieService";
 import {AxiosError} from "axios";
+
+import {IMovieModel} from "../../models/IMovieModels/IMovieModel";
+import {movieService} from "../../services/movieService";
 import {IVideoModel} from "../../models/IVideoModels/IVideoModel";
 
 type MoviesSliceType = {
@@ -9,6 +10,7 @@ type MoviesSliceType = {
     trailer: IVideoModel[],
     error: string | null,
 }
+
 const movieInitialState: MoviesSliceType = {
     movie: null,
     trailer: [],

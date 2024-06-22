@@ -1,8 +1,9 @@
 import React from 'react';
-import css from './HeaderComponent.module.css';
+import {NavLink} from "react-router-dom";
+
 import GenreSelectorComponent from "../GenreSelectorComponent/GenreSelectorComponent";
 import SearchComponent from "../SearchComponent/SearchComponent";
-import {NavLink} from "react-router-dom";
+import css from './HeaderComponent.module.css';
 
 const HeaderComponent = () => {
     return (

@@ -1,5 +1,6 @@
 import React from 'react';
 import {Avatar, Stack} from "@mui/material";
+
 import css from './UserInfoComponent.module.css'
 
 const UserInfoComponent = () => {
@@ -14,7 +15,6 @@ const UserInfoComponent = () => {
             </Stack>
             <h3>Estele Collins</h3>
             <h4>Montreal QS</h4>
-            <hr/>
 
             </div>
     );
